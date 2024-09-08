@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "55ffeb5f-03a4-4211-b774-5fe109d5892c",
+		"name": "Countries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6530262"
+	},
+	"item": [
+		{
+			"name": "Get All countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains 'India'\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"India\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/v3.1/all",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"v3.1",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Europe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains 'German'\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"German\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/v3.1/region/europe",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"v3.1",
+						"region",
+						"europe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Asia",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains 'India'\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"India\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/v3.1/region/asia",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"v3.1",
+						"region",
+						"asia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
